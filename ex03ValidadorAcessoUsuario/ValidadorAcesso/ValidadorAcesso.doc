@@ -1,0 +1,24 @@
+O módulo de segurança do sistema limita o acesso a usuários que tenham 18 anos ou mais. Além disso, o sistema aceita no máximo 3 tentativas de digitação antes de encerrar.
+Rode o código abaixo na IDE e realize testes informando a idade 18 anos exatos.
+O que aconteceu quando você digitou a idade 18?
+    resultou em "Digite a idade do usuário para liberar o módulo: 18
+                Acesso NEGADO. Permitido apenas para maiores de 18 anos."
+
+Identifique o operador relacional incorreto no código e proponha a correção.
+    codigo permite apenas maiores de 18, deve ser alterado para >=
+    loop criado com do-while
+    "do {
+            System.out.print("Digite a idade do usuário para liberar o módulo: ");
+            int idade = scanner.nextInt();
+
+            if (idade < 18) { // codigo permite apenas maiores de 18, deve ser alterado para >=
+                System.out.println("Acesso NEGADO. Permitido apenas para maiores de 18 anos.");
+                contador++;                
+            } else {
+                System.out.println("Acesso PERMITIDO ao módulo Desktop!");
+                //contador = 3;
+                break;
+                
+            }
+            System.out.println("Tentativas excedidas ");
+        }  while (contador <= 3);"

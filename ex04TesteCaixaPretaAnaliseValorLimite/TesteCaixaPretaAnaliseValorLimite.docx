@@ -1,0 +1,16 @@
+A equipa de negócios definiu a seguinte regra para a concessão de crédito num sistema Desktop bancário:
+Clientes com pontuação de score de 300 até 700 têm crédito Aprovado.
+Pontuações abaixo de 300 ou acima de 700 são Negadas.
+Executa o código na tua IDE, realiza testes de caixa preta focando-te nos valores limite (fronteiras) e responde:
+
+Testa os valores 299, 300, 700 e 701. Qual(ais) destes valores provocou(aram) uma falha no sistema?
+    "Digite o score do cliente (0 a 1000): 299
+    Crédito NEGADO." - Esta correto, pois é abaixo de 300.
+    "Digite o score do cliente (0 a 1000): 300
+    Crédito NEGADO." - Esta errado pois deveria dar "credito aprovado".
+    "Digite o score do cliente (0 a 1000): 700
+    Crédito APROVADO!" - Esta correto.
+    "Digite o score do cliente (0 a 1000): 701
+    Crédito NEGADO." - De acordo com os critérios estabelecidos esta correto.
+
+Que operador relacional no código causou o defeito?

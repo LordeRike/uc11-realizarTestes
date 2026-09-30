@@ -1,0 +1,23 @@
+Um cliente relatou que o sistema de cadastro de produtos da aplicação Desktop fecha sozinho sem avisar quando tenta cadastrar o preço de um item.
+Execute o código em Java, simule o teste do usuário digitando um texto (ex: quinze) ou uma formatação errada de número no campo de preço e responda:
+
+Qual foi a mensagem exata de exceção/erro lançada pelo Java no console?
+
+    "Exception in thread "main" java.lang.NumberFormatException: For input string: "quinze"
+        at java.base/jdk.internal.math.FloatingDecimal.check(FloatingDecimal.java:1751)
+        at java.base/jdk.internal.math.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1374)
+        at java.base/jdk.internal.math.FloatingDecimal.parseDouble(FloatingDecimal.java:61)
+        at java.base/java.lang.Double.parseDouble(Double.java:993)
+        at CadastroProduto.main(CadastroProduto.java:15)"
+
+Que estrutura de código deve ser adicionada para evitar que o programa feche abruptamente e, em vez disso, exiba uma mensagem amigável ao usuário?
+    try {
+            
+            double preco = Double.parseDouble(precoInput);
+            
+            System.out.println("\n--- Produto Cadastrado com Sucesso ---");
+            System.out.println("Item: " + nome);
+            System.out.printf("Preço: R$ %.2f%n", preco);
+        } catch (NumberFormatException e) {
+            System.out.println("\n[ERRO] Preço inválido! Por favor, insira apenas números usando ponto como separador decimal (ex: 15.50).");
+        }

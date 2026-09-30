@@ -1,0 +1,11 @@
+A empresa contratou você para testar o módulo de vendas do sistema Desktop. O requisito de negócio exige:
+Compras acima de R$ 100,00 recebem 10% de desconto.
+Compras de até R$ 100,00 não recebem desconto.
+Rode o código abaixo na sua IDE, execute testes de caixa preta informando diferentes valores e responda:
+
+Qual valor digitado fez o sistema apresentar uma falha?
+    Valores negativos.
+Olhando o código-fonte abaixo, qual é o defeito na regra lógica e como você o corrigiria?
+    valorFinal não iniciado,
+    Enunciado pede desconto para vendas maiores de 100, logica estava maior ou igual (>=), foi alterada para (>),
+    Inserido if para validação de valor negativo,
