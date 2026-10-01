@@ -1,0 +1,11 @@
+Numa aplicação Desktop de gestão escolar, o professor digita a nota final do aluno (de 0.0 a 10.0). O sistema classifica a situação:
+
+    Nota de 7.0 a 10.0: Aprovado
+    Nota de 5.0 a 6.9: Recuperação
+    Nota de 0.0 a 4.9: Reprovado
+
+Executa testes de Caixa Preta com valores das classes válidas e inválidas (ex: números negativos ou maiores que 10) e responde:
+
+    O que acontece se digitares a nota -2.0 ou 11.5?
+
+    Que problema de validação de requisitos foi omitido no código?

@@ -1,0 +1,14 @@
+Observa a estrutura interna do código abaixo (Caixa Branca).
+O sistema calcula o valor do bilhete num programa Desktop de um cinema:
+    Crianças (idade < 12): Pagam R$ 10,00.
+    Estudantes (com carteira de estudante true): Pagam R$ 15,00.
+    Idosos (idade => 60): Pagam R$ 12,00.
+    Público Geral: Paga R$ 30,00.
+Analisa a lógica do código Java e responde:
+    Escreve uma lista de valores de entrada para garantir 100% de cobertura de código (garantir que todas as linhas e blocos do if/else são executados).
+    Identifica a falha de prioridade/ordem nas decisões do código para uma criança que também é estudante
+
+    1- Idade = 20, estudande = false, retorna = R$30,00. Passou. Utiliza todas as linhas de if/else.
+    2- Idade = 11, estudande = true, retorna = R$15,00. Falhou - Estudante sobrescreve valor por idade.
+    3- Idade = 16, estudande = true, retorna = R$15,00. Passou
+    4- Idade = 60, estudande = false, retorna = R$12,00. Passou
