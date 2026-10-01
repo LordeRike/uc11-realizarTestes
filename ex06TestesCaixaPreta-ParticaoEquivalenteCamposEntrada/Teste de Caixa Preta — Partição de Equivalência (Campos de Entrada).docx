@@ -7,5 +7,8 @@ Numa aplicação Desktop de gestão escolar, o professor digita a nota final do 
 Executa testes de Caixa Preta com valores das classes válidas e inválidas (ex: números negativos ou maiores que 10) e responde:
 
     O que acontece se digitares a nota -2.0 ou 11.5?
+        quando inserido -2 e sistema retorna como Reprovado;
+        quando inserido 11,5 e sistema retorna como Aprovado.
 
     Que problema de validação de requisitos foi omitido no código?
+        O código não possui validação para números negativos e nem maiores de 10

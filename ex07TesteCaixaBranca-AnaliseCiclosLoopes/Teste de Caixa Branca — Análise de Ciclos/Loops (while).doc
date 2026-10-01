@@ -1,0 +1,10 @@
+O código abaixo faz a contagem de tentativas de autenticação do utilizador num ecran Desktop.
+O sistema deve permitir no máximo 3 tentativas incorretas antes de bloquear o acesso.
+
+Analisa a estrutura do laço de repetição (while) e responde:
+
+    Executa o programa errando a senha de propósito. Quantas vezes o sistema te pediu a senha até bloquear?
+        O Sistema aceitou 4 tentativas
+
+    Qual é o defeito na condição do laço while e como corrigi-lo?
+        o laço estava começanco com tentantiva em 0, logo davam 4 tentativas, para corrigir é só iniciar em 1.

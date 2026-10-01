@@ -1,0 +1,28 @@
+Num módulo Desktop de controlo de stock, o utilizador introduz a quantidade de itens a adicionar.
+A aplicação recebe o dado como texto para validação prévia.
+
+Roda o programa na IDE e realiza os seguintes testes:
+
+    Teste 1: Digita a quantidade 10.
+        Retornou: Sucesso: 10 itens adicionados ao stock.
+    Teste 2: Digita 10.5 (número com casas decimais para um campo de contagem inteira de peças).
+        Retornou: Exception in thread "main" java.lang.NumberFormatException: For input string: "10,5"
+    Teste 3: Deixa o campo em branco e pressiona Enter.
+        Retornou: Exception in thread "main" java.lang.NumberFormatException: For input string: ""
+
+Responde:
+    Qual dos testes causou o encerramento inesperado (crash) da aplicação?
+        Testes 2 e 3 causaram o encerramente inesperado
+    Que exceção exata foi mostrada na consola e como podes corrigi-la utilizando try/catch?
+        Retornou: Exception in thread "main" java.lang.NumberFormatException: For input string: "10,5"
+        try {
+            int quantidade = Integer.parseInt(quantidadeInput);
+            
+            if (quantidade > 0) {
+                System.out.println("Sucesso: " + quantidade + " itens adicionados ao stock.");
+            } else {
+                System.out.println("Erro: A quantidade deve ser maior que zero.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Erro: Digite um número inteiro válido.");
+        }
