@@ -8,7 +8,7 @@ public class AnaliseCredito {
         int score = scanner.nextInt();
 
         // Regra: Permitido de 300 ate 700 inclusive
-        if (score > 300 && score <= 700) {
+        if (score >= 300 && score <= 700) {
             System.out.println("Crédito APROVADO!");
         } else {
             System.out.println("Crédito NEGADO.");
