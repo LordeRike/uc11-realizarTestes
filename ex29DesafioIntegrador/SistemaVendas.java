@@ -1,11 +1,16 @@
 public class SistemaVendas {
 
     // Regra 1: Aniversariante ganha 15% de desconto (multiplica por 0.85)
-    public double calcularTotalComDesconto(double valorTotal, boolean ehAniversariante) {
-        if (ehAniversariante) {
+    public double calcularTotalComDesconto(double valorTotal, boolean ehAniversariante, boolean embalarParaPresente) {
+        if (ehAniversariante && embalarParaPresente) {
+            return (valorTotal * 0.85) + 5;            
+        } else if (ehAniversariante) {
             // BUG 1: Aplicou apenas 5% de desconto (0.95) em vez de 15% (0.85)
             return valorTotal * 0.85; // Corrigido para 15% de desconto
+        } else if (embalarParaPresente) {
+            return valorTotal + 5;
         }
+        
         return valorTotal;
     }
 
@@ -26,5 +31,18 @@ public class SistemaVendas {
             // BUG 3: Calculou 2% em vez dos 5% acordados
             return valorVenta * 0.05; 
         }
+    }
+
+    // Categorização do Nível de Cliente (Novo Método):
+    public String categorizarCLiente(double totalAculumadoCompras) {
+        if (totalAculumadoCompras < 500.00) {
+            return "CLIENTE BRONZE";
+        } else if (totalAculumadoCompras >= 500.00 && totalAculumadoCompras <= 1499.99) {
+            return "CLIENTE PRATA";
+        } else if (totalAculumadoCompras >= 1500.00) {
+            return "CLIENTE OURO";
+        } else {
+            return "Categoria Indefinida";
+        }         
     }
 }
